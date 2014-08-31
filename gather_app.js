@@ -11,7 +11,7 @@ var logger = require('morgan');
 //var connection_string = 'mongodb://' + String(username) + ':' + String(pword) + '@kahana.mongohq.com:10060/gather-list'
 //configuration
 
-mongoose.connect(process.env.MONGOHQ_URL);
+mongoose.connect(String(process.env.MONGOHQ_URL));
 
 
 app.use(express.static(__dirname + '/public'));
@@ -69,5 +69,5 @@ app.get('/emails', function(req,res) {
 });
 
 //listen
-app.listen(8080)
+app.listen(process.env.PORT)
 console.log('App listening on port 8080')
