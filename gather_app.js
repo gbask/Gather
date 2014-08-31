@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 var logger = require('morgan');
 var username = process.env.DB_USERNAME;
 var pword = process.env.DB_PW;
-var connection_string = 'mongodb://' + username + ':' + pword + '@kahana.mongohq.com:10060/gather-list'
+var connection_string = 'mongodb://' + String(username) + ':' + String(pword) + '@kahana.mongohq.com:10060/gather-list'
 
 //configuration
 
@@ -72,5 +72,5 @@ app.get('/emails', function(req,res) {
 });
 
 //listen
-app.listen(8080)
+app.listen(process.env.PORT)
 console.log('App listening on port 8080')
