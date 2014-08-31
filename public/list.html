@@ -1,0 +1,84 @@
+<!doctype html>
+
+<html ng-app="Gather">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Email List</title>
+
+	<!-- SCROLLS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+	<style>
+		html 					{ overflow-y:scroll; }
+		body 					{ padding-top:50px; }
+		#todo-list 				{ margin-bottom:30px; }
+	</style>
+
+	<!-- SPELLS -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script><!-- load angular -->
+	<script src="core.js"></script>
+
+</head>
+<!-- SET THE CONTROLLER AND GET ALL TODOS -->
+<body ng-controller="mainController">
+	<div class="container">
+
+		<!-- HEADER AND TODO COUNT -->
+		<div class="jumbotron text-center">
+			<h1>Names <span class="label label-info">{{ emails.length }}</span></h1>
+		</div>
+
+		<!-- TODO LIST -->
+		<div id="email-list" class="row">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Email</th>
+						<th>Gender</th>
+						<th>Relationship</th>
+						<th>City</th>
+						<th>Neighborhood</th>
+					</tr>
+				</thead>
+				<tbody ng-repeat="email in emails">
+					<tr>
+						<td>{{ email.name }}</td>
+						<td>{{ email.e_mail }}</td>
+						<td>{{ email.gender }}</td>
+						<td>{{ email.rstatus }}</td>
+						<td>{{ email.city }}</td>
+						<td>{{ email.neighborhood }}</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- LOOP OVER THE TODOS IN $scope.todos -->
+			<!--
+			<div class="row" ng-repeat="email in emails">
+				<div class="col-md-3 col-md-offset-1">
+					<label>
+						{{ email.name }}
+					</label>
+				</div>
+				<div class="col-md-3">
+					<label>
+						{{ email.e_mail }}
+					</label>
+				</div>
+				<div class="col-md-3">
+					<label>
+						{{ email.gender }}
+					</label>
+				</div>
+			</div>
+		-->
+		</div>
+
+
+
+	</div>
+
+</body>
+</html>

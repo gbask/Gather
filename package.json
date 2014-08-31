@@ -1,0 +1,11 @@
+{
+	"name"			: "BootDry",
+	"version"		: "0.0.0",
+	"description"	: "Boot Dryer Pre-Order",
+	"main"			: "server.js",
+	"author"		: "grumb",
+	"dependencies"	:	{
+		"express"	: "4.x",
+		"mongoose"	: "3.x"
+	}
+}

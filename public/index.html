@@ -1,0 +1,287 @@
+<!doctype html>
+
+<html ng-app="Gather">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Gather</title>
+
+	<!-- SCROLLS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+
+	<!-- load bootstrap -->
+
+	<link href="//fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet" type="text/css">
+
+
+	<style>
+		html 					{ overflow-y:scroll; }
+		body 				{   padding-top:70px; 
+								padding-bottom:100px;
+								font-family: 'Oswald';
+								font-weight: bold;
+
+							}
+								{ margin-bottom:30px; }
+
+				.navbar-default {
+			background-color: #66cdaa;
+			border-color: #66cdaa;
+		}
+		.navbar-default .navbar-brand {
+			color: #ffffff;
+		}
+		.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+			color: #ffffff;
+		}
+		.navbar-default .navbar-text {
+			color: #ffffff;
+		}
+		.navbar-default .navbar-nav > li > a {
+			color: #ffffff;
+		}
+		.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+			color: #ffffff;
+		}
+		.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+			color: #ffffff;
+			background-color: #66cdaa;
+		}
+		.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+			color: #ffffff;
+			background-color: #66cdaa;
+		}
+		.navbar-default .navbar-toggle {
+			border-color: #66cdaa;
+		}
+		.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+			background-color: #66cdaa;
+		}
+		.navbar-default .navbar-toggle .icon-bar {
+			background-color: #ffffff;
+		}
+		.navbar-default .navbar-collapse,
+		.navbar-default .navbar-form {
+			border-color: #ffffff;
+		}
+		.navbar-default .navbar-link {
+			color: #ffffff;
+		}
+		.navbar-default .navbar-link:hover {
+			color: #ffffff;
+		}
+
+		@media (max-width: 767px) {
+			.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+				color: #ffffff;
+			}
+			.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+				color: #ffffff;
+			}
+			.navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+				color: #ffffff;
+				background-color: #66cdaa;
+			}
+		}
+
+		.other-color {
+			background: #e9e9e9;
+		}
+
+		.white-font {
+			font-family: 'Oswald';
+			color: #000000;
+		}
+
+		.jumbotron h1 {
+			font-family: 'Oswald';
+			color: #555555;
+		}
+
+		.jumbotron h2 {
+			font-family: 'Oswald';
+			color: #555555;
+		}
+
+		.btn-success,
+		.btn-success:active {
+			background-color: #66cdaa;
+			border-color: #66cdaa;
+			font-family: 'Oswald';
+		}
+
+		.btn-success h1 {
+			font-family: 'Oswald';
+		}
+
+		.modal-title h2 {
+			font-family: 'Oswald';
+		}
+
+		
+		.btn-success:focus,
+		.btn-success:hover {
+			background-color: #66aaaa;
+		}
+	</style>
+
+	<!-- SPELLS -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script><!-- load angular -->
+	<script src="core.js"></script>
+	<!-- Load Bootstrap -->
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+				<span class="sr-only">Toggle Navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">GATHER</a>
+		</div>
+
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#">About</a></li>
+				<li><a href="#" data-toggle="modal" data-target="#myModal">Sign Up</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<!-- SET THE CONTROLLER AND GET ALL TODOS -->
+<body ng-controller="mainController">
+
+	<div class = "container">
+		<div class="jumbotron text-center" href="#about">
+			<span class="white-font">
+				<div class = "row">
+					<div class="col-sm-6 col-sm-offset-3 text-center">
+						<!-- img src="http://images.buddytv.com/articles/124471_0092_pre.jpg" class="img-responsive" -->
+						<img src="http://i1335.photobucket.com/albums/w663/jopowpow/Gather2_branded_zpsda45fc93.jpg" class="img-responsive">
+					</div>
+				</div>
+				<div class = "row">
+					<div class="col-sm-8 col-sm-offset-2 text-center">
+						<h1>3 Couples. 6 New Friends.</h1>
+					</div>
+					<div class="col-sm-8 col-sm-offset-2 text-center">
+						<h2>Let's get together to stay together.</h2>
+				</div>
+			</span>
+		</div>
+	</div>
+
+	<div class="container">
+
+		<div class="alert alert-success" id="messages" ng-show="message">{{ message }} </div>
+
+		<!-- Signup Modal Button -->
+		<div class="row">
+			<div class="col-sm-6 col-sm-offset-3 text-center">
+				<button class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#myModal" other-color>
+					<h1>Sign Up</h1>
+				</button>
+			</div>
+		</div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+						</button>
+							<h2 class="modal-title" id="myModalLabel"><span style =font-family:"Oswald";>Please Enter Your Info</span></h2>
+							<h2><small><span style = font-family:"Oswald";>We will keep you posted on our progress</span></small></h2>
+					</div>
+					<div class="modal-body">
+
+						<!-- FORM TO CREATE TODOS -->
+						<div id="signup-form" class="row">
+							<div class="col-sm-8 col-sm-offset-2 text-left">
+								<!-- Show Error/Succes Messages -->
+								
+								<form>
+
+									<div id ="name-group" class="form-group">
+										<!-- label>Name</label -->
+										<input type="text" class="form-control input-lg text-left" placeholder="Name" ng-model="formData.name">
+									</div>
+
+									<div id = "e_mail-group" class = "form-group">
+										<!--label>E-mail Address</label-->
+										<input type="text" class="form-control input-lg text-left" placeholder="E-mail" ng-model="formData.e_mail">
+									</div>
+
+									<div id ="city-group" class="form-group">
+										<!--label>City</label-->
+										<input type="text" class="form-control input-lg text-left" placeholder="City" ng-model="formData.city">
+									</div>
+
+									<div id="neighborhood-group" class="form-group">
+										<!--label>Neighborhood</label-->
+										<input type="text" class="form-control input-lg text-left" placeholder="Neighborhood" ng-model="formData.neighborhood">
+									</div>
+
+									<!-- Gender Radio Buttons -->
+									<label>Gender</label>
+									<div id = "gender-group" class = "form-group">
+										<div class="radio">
+											<label>
+												<input type="radio" name="gender" value="male" ng-model="formData.gender">
+												Male
+											</label>
+										</div>
+										<div class = "radio">
+											<label>
+												<input type="radio" name="gender" value="female" ng-model="formData.gender">
+												Female
+											</label>
+										</div>
+									</div>
+
+									<!-- Relationship Status Radio Buttons -->
+									<label>Relationship Status</label>
+									<div id = "relationship-group" class = "form-group">
+										<div class = "radio">
+											<label>
+												<input type="radio" name="rstatus" value="Dating" ng-model="formData.rstatus">
+												Dating
+											</label>
+										</div>
+										<div class = "radio">
+											<label>
+												<input type="radio" name="rstatus" value="Engaged" ng-model="formData.rstatus">
+												Engaged
+											</label>
+										</div>
+										<div class = "radio">
+											<label>
+												<input type="radio" name="rstatus" value="Married" ng-model="formData.rstatus">
+												Married
+											</label>
+										</div>
+									</div>
+								</form>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<!-- createToDo() WILL CREATE NEW TODOS -->
+							<button type="submit" class="btn btn-success btn-lg" ng-click="createSubmission()">Submit</button>
+						</div>
+					
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>
