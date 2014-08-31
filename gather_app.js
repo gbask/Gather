@@ -6,13 +6,15 @@ var app = express();
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var logger = require('morgan');
-var username = process.env.DB_USERNAME;
-var pword = process.env.DB_PW;
-var connection_string = 'mongodb://' + String(username) + ':' + String(pword) + '@kahana.mongohq.com:10060/gather-list'
-
+//var username = process.env.DB_USERNAME;
+//var pword = process.env.DB_PW;
+username = 'gbaskett@gmail.com';
+pword = 'tonys1';
+//var connection_string = 'mongodb://' + String(username) + ':' + String(pword) + '@kahana.mongohq.com:10060/gather-list'
+var MONGOHQ_URL = "mongodb://gbask:tonys1@kahana.mongohq.com:10060/gather-list"
 //configuration
 
-mongoose.connect(connection_string);
+mongoose.connect(MONGOHQ_URL);
 
 
 app.use(express.static(__dirname + '/public'));
@@ -57,8 +59,6 @@ app.post('/api/emails', function(req,res) {
 			res.send(err)
 
 		res.send(200);
-
-		console.log('Thanks! We will keep you posted');
 	});
 });
 
@@ -72,5 +72,5 @@ app.get('/emails', function(req,res) {
 });
 
 //listen
-app.listen(process.env.PORT)
+app.listen(8080)
 console.log('App listening on port 8080')
