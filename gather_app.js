@@ -6,10 +6,13 @@ var app = express();
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var logger = require('morgan');
+var username = process.env.DB_USERNAME;
+var pword = process.env.DB_PW;
+var connection_string = 'mongodb://' + username + ':' + pword + '@kahana.mongohq.com:10060/gather-list'
 
 //configuration
 
-mongoose.connect('mongodb://DB_USERNAME:DB_PW@kahana.mongohq.com:10060/gather-list');
+mongoose.connect(connection_string);
 
 
 app.use(express.static(__dirname + '/public'));
