@@ -9,7 +9,7 @@ var logger = require('morgan');
 
 //configuration
 
-mongoose.connect('mongodb://localhost/27017');
+mongoose.connect('mongodb://DB_USERNAME:DB_PW@kahana.mongohq.com:10060/gather-list');
 
 
 app.use(express.static(__dirname + '/public'));
