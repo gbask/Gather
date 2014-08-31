@@ -8,13 +8,10 @@ var bodyParser = require('body-parser');
 var logger = require('morgan');
 //var username = process.env.DB_USERNAME;
 //var pword = process.env.DB_PW;
-username = 'gbaskett@gmail.com';
-pword = 'tonys1';
 //var connection_string = 'mongodb://' + String(username) + ':' + String(pword) + '@kahana.mongohq.com:10060/gather-list'
-var MONGOHQ_URL = "mongodb://gbask:tonys1@kahana.mongohq.com:10060/gather-list"
 //configuration
 
-mongoose.connect(MONGOHQ_URL);
+mongoose.connect(process.env.MONGOHQ_URL);
 
 
 app.use(express.static(__dirname + '/public'));
