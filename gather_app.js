@@ -3,6 +3,7 @@
 // set up
 var express = require('express');
 var app = express();
+var port = process.env.PORT || 8080;
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var logger = require('morgan');
@@ -10,8 +11,10 @@ var logger = require('morgan');
 //var pword = process.env.DB_PW;
 //var connection_string = 'mongodb://' + String(username) + ':' + String(pword) + '@kahana.mongohq.com:10060/gather-list'
 //configuration
+var dbDevURL = 'mongodb://GatherDev2:speedyDev@kahana.mongohq.com:10060/gather-list';
 
-mongoose.connect(String(process.env.MONGOHQ_URL));
+//mongoose.connect(String(process.env.MONGOHQ_URL));
+mongoose.connect(dbDevURL);
 
 app.use(express.static(__dirname + '/public'));
 app.use(logger('dev'));
@@ -58,6 +61,14 @@ app.post('/api/emails', function(req,res) {
 	});
 });
 
+function requireLogin(req, res, next) {
+	if (req.session.loggedIn) {
+		next();
+	} else {
+		res.redirect('/login');
+	}
+}
+
 //application
 app.get('/', function(req,res) {
 	res.sendfile('/public/index.html');
@@ -72,7 +83,8 @@ app.get('/emails', function(req,res) {
 });
 
 
+
+
 //listen
-app.listen(process.env.PORT)
-//app.listen(8080);
+app.listen(port);
 console.log('App listening on port 8080')
