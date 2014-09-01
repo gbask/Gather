@@ -73,6 +73,6 @@ app.get('/emails', function(req,res) {
 
 
 //listen
-//app.listen(process.env.PORT)
-app.listen(8080);
+app.listen(process.env.PORT)
+//app.listen(8080);
 console.log('App listening on port 8080')
