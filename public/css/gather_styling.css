@@ -1,16 +1,23 @@
 html 					{ overflow-y:scroll; }
 body 				{   padding-top:70px; 
-						padding-bottom:100px;
+						padding-bottom:0px;
 						font-family: 'Oswald';
 						font-weight: bold;
 						background-color: #eeeeee;
 					}
-						{ margin-bottom:30px; }
 
 .navbar-default {
 	background-color: #66cdaa;
 	border-color: #66cdaa;
 	font-size: 1.2em;
+}
+
+h2 {
+	font-family: 'Oswald';
+}
+
+h4 {
+	font-family: 'Oswald';
 }
 
 
@@ -86,7 +93,7 @@ body 				{   padding-top:70px;
 	line-height: 0.1;
 }
 
-.jumbotron h2 {
+.font-family h2 {
 	font-family: 'Oswald';
 	font-size: 2em;
 	color: #555555;
@@ -123,8 +130,8 @@ body 				{   padding-top:70px;
 	background-color: #66aaaa;
 }
 
-.background-2-color {
-	background-color: #ffffff;
+.top-font {
+	font-family: "Oswald";
 }
 
 .new-grey-bg {
