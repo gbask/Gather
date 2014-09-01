@@ -13,7 +13,6 @@ var logger = require('morgan');
 
 mongoose.connect(String(process.env.MONGOHQ_URL));
 
-
 app.use(express.static(__dirname + '/public'));
 app.use(logger('dev'));
 app.use(bodyParser());
@@ -64,10 +63,16 @@ app.get('/', function(req,res) {
 	res.sendfile('/public/index.html');
 });
 
+app.get('/about', function(req,res) {
+	res.sendfile(__dirname + '/public/about.html');
+});
+
 app.get('/emails', function(req,res) {
 	res.sendfile(__dirname + '/public/list.html');
 });
 
+
 //listen
-app.listen(process.env.PORT)
+//app.listen(process.env.PORT)
+app.listen(8080);
 console.log('App listening on port 8080')
