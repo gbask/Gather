@@ -6,11 +6,9 @@ var app = express();
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var logger = require('morgan');
-//var username = process.env.DB_USERNAME;
-//var pword = process.env.DB_PW;
-//var connection_string = 'mongodb://' + String(username) + ':' + String(pword) + '@kahana.mongohq.com:10060/gather-list'
-//configuration
+var port = process.env.PORT || 8080;
 
+//configuration
 mongoose.connect(String(process.env.MONGOHQ_URL));
 
 app.use(express.static(__dirname + '/public'));
@@ -73,6 +71,5 @@ app.get('/emails', function(req,res) {
 
 
 //listen
-app.listen(process.env.PORT)
-//app.listen(8080);
-console.log('App listening on port 8080')
+app.listen(port);
+console.log('App listening on port ' + port);
