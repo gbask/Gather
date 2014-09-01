@@ -3,15 +3,19 @@ body 				{   padding-top:70px;
 						padding-bottom:100px;
 						font-family: 'Oswald';
 						font-weight: bold;
-
+						background-color: #eeeeee;
 					}
 						{ margin-bottom:30px; }
 
-		.navbar-default {
+.navbar-default {
 	background-color: #66cdaa;
 	border-color: #66cdaa;
+	font-size: 1.2em;
 }
+
+
 .navbar-default .navbar-brand {
+	font-size: 1.5em;
 	color: #ffffff;
 }
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
@@ -80,8 +84,6 @@ body 				{   padding-top:70px;
 	font-family: 'Oswald';
 	color: #555555;
 	line-height: 0.1;
-	padding-bottom: 1em;
-	padding-top: 1em;
 }
 
 .jumbotron h2 {
@@ -119,4 +121,17 @@ body 				{   padding-top:70px;
 .btn-success:focus,
 .btn-success:hover {
 	background-color: #66aaaa;
+}
+
+.background-2-color {
+	background-color: #ffffff;
+}
+
+.new-grey-bg {
+	background-color: #dddddd;
+	margin-left: -20%;
+	padding-left: 20%;
+	margin-right: -20%;
+	padding-right: 20%;
+	padding-top: 3%;
 }
