@@ -13,118 +13,7 @@
 	<!-- load bootstrap -->
 
 	<link href="//fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet" type="text/css">
-
-
-	<style>
-		html 					{ overflow-y:scroll; }
-		body 				{   padding-top:70px; 
-								padding-bottom:100px;
-								font-family: 'Oswald';
-								font-weight: bold;
-
-							}
-								{ margin-bottom:30px; }
-
-				.navbar-default {
-			background-color: #66cdaa;
-			border-color: #66cdaa;
-		}
-		.navbar-default .navbar-brand {
-			color: #ffffff;
-		}
-		.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-			color: #ffffff;
-		}
-		.navbar-default .navbar-text {
-			color: #ffffff;
-		}
-		.navbar-default .navbar-nav > li > a {
-			color: #ffffff;
-		}
-		.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-			color: #ffffff;
-		}
-		.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-			color: #ffffff;
-			background-color: #66cdaa;
-		}
-		.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-			color: #ffffff;
-			background-color: #66cdaa;
-		}
-		.navbar-default .navbar-toggle {
-			border-color: #66cdaa;
-		}
-		.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-			background-color: #66cdaa;
-		}
-		.navbar-default .navbar-toggle .icon-bar {
-			background-color: #ffffff;
-		}
-		.navbar-default .navbar-collapse,
-		.navbar-default .navbar-form {
-			border-color: #ffffff;
-		}
-		.navbar-default .navbar-link {
-			color: #ffffff;
-		}
-		.navbar-default .navbar-link:hover {
-			color: #ffffff;
-		}
-
-		@media (max-width: 767px) {
-			.navbar-default .navbar-nav .open .dropdown-menu > li > a {
-				color: #ffffff;
-			}
-			.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-				color: #ffffff;
-			}
-			.navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-				color: #ffffff;
-				background-color: #66cdaa;
-			}
-		}
-
-		.other-color {
-			background: #e9e9e9;
-		}
-
-		.white-font {
-			font-family: 'Oswald';
-			color: #000000;
-		}
-
-		.jumbotron h1 {
-			font-family: 'Oswald';
-			color: #555555;
-		}
-
-		.jumbotron h2 {
-			font-family: 'Oswald';
-			color: #555555;
-		}
-
-		.btn-success,
-		.btn-success:active {
-			background-color: #66cdaa;
-			border-color: #66cdaa;
-			font-family: 'Oswald';
-		}
-
-		.btn-success h1 {
-			font-family: 'Oswald';
-		}
-
-		.modal-title h2 {
-			font-family: 'Oswald';
-		}
-
-		
-		.btn-success:focus,
-		.btn-success:hover {
-			background-color: #66aaaa;
-		}
-	</style>
+	<link rel="stylesheet" href="css/gather_styling.css">
 
 	<!-- SPELLS -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
@@ -149,7 +38,7 @@
 
 		<div class="collapse navbar-collapse" id="navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#">About</a></li>
+				<li><a href="/about">About</a></li>
 				<li><a href="#" data-toggle="modal" data-target="#myModal">Sign Up</a></li>
 			</ul>
 		</div>
@@ -159,22 +48,26 @@
 <body ng-controller="mainController">
 
 	<div class = "container">
-		<div class="jumbotron text-center" href="#about">
-			<span class="white-font">
-				<div class = "row">
-					<div class="col-sm-6 col-sm-offset-3 text-center">
-						<!-- img src="http://images.buddytv.com/articles/124471_0092_pre.jpg" class="img-responsive" -->
-						<img src="http://i1335.photobucket.com/albums/w663/jopowpow/Gather2_branded_zpsda45fc93.jpg" class="img-responsive">
-					</div>
+		<div class="jumbotron text-center">
+			<div class = "row">
+				<div class="col-sm-6 col-sm-offset-3 text-center">
+					<!-- img src="http://images.buddytv.com/articles/124471_0092_pre.jpg" class="img-responsive" -->
+					<img src="http://i1335.photobucket.com/albums/w663/jopowpow/Gather2_branded_zpsda45fc93.jpg" class="img-responsive">
 				</div>
-				<div class = "row">
-					<div class="col-sm-8 col-sm-offset-2 text-center">
-						<h1>3 Couples. 6 New Friends.</h1>
-					</div>
-					<div class="col-sm-8 col-sm-offset-2 text-center">
-						<h2>Let's get together to stay together.</h2>
+			</div>
+			<div class = "row">
+				<div class="col-sm-10 col-sm-offset-1 text-center" >
+					<h2>3 Couples. 6 New Friends.</h2>
 				</div>
-			</span>
+				<div class="col-sm-10 col-sm-offset-1 text-center">
+					<h2>Let's get together to stay together.</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-10 col-sm-offset-1 text-center">
+					<h4>Gather connects you and yours to two other cool couples for some quality hang time.</h4>
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -186,7 +79,7 @@
 		<div class="row">
 			<div class="col-sm-6 col-sm-offset-3 text-center">
 				<button class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#myModal" other-color>
-					<h1>Sign Up</h1>
+					<h1>Get Started</h1>
 				</button>
 			</div>
 		</div>
@@ -280,8 +173,23 @@
 					
 			</div>
 		</div>
-
 	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1>   </h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-10 col-sm-offset-1 text-center">
+				<img src="http://i.imgur.com/6Tf32RL.jpg" class="img-responsive">
+			</div>
+		</div>
+	</div>
+
+
+	
 
 </body>
 </html>
