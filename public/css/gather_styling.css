@@ -1,9 +1,13 @@
 html 					{ overflow-y:scroll; }
-body 				{   padding-top:70px; 
+body 				{   padding-top:50px; 
 						padding-bottom:0px;
 						font-family: 'Oswald';
 						font-weight: bold;
 						background-color: #eeeeee;
+						padding-left: 0 !important;
+						padding-right: 0 !important;
+						margin-left: 0px;
+						margin-right: 0px;
 					}
 
 .navbar-default {
@@ -136,9 +140,13 @@ h4 {
 
 .new-grey-bg {
 	background-color: #dddddd;
-	margin-left: -20%;
-	padding-left: 20%;
-	margin-right: -20%;
-	padding-right: 20%;
-	padding-top: 3%;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	padding: 0;
+	padding-bottom: 50px;
+	margin-left:  0px;
+	margin-right: 0px;
 }
+
+
+
