@@ -1,5 +1,5 @@
 {
-	"name"			: "BootDry",
+	"name"			: "Gather",
 	"version"		: "0.0.0",
 	"description"	: "Gather",
 	"main"			: "gather_app.js",
