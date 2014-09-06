@@ -16,6 +16,10 @@ body 				{   padding-top:50px;
 	font-size: 1.2em;
 }
 
+h1 {
+	font-family: 'Oswald';
+}
+
 h2 {
 	font-family: 'Oswald';
 }
@@ -84,6 +88,7 @@ h4 {
 
 .other-color {
 	background: #e9e9e9;
+	font-color: #ffffff;
 }
 
 .white-font {

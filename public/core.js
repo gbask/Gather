@@ -16,8 +16,8 @@ function mainController($scope, $http) {
 		$http.post('/api/emails', $scope.formData)
 			.success(function(data) {
 				$scope.formData = {};
-				$scope.message = 'Thanks! We will keep you posted';
-				$('#myModal').modal('toggle');
+				$scope.message = 'Thank you so much! We will follow up with you at the email provided. In the meantime, click on this text for a relevant video.';
+				//$('#myModal').modal('toggle');
 			})
 			.error(function(data) {
 				console.log('Error: ' + data);

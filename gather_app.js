@@ -10,7 +10,7 @@ var port = process.env.PORT || 8080;
 
 //configuration
 mongoose.connect(String(process.env.MONGOHQ_URL));
-//mongoose.connect(dbDevURL);
+mongoose.connect(dbDevURL);
 app.use(express.static(__dirname + '/public'));
 app.use(logger('dev'));
 app.use(bodyParser());
@@ -19,11 +19,14 @@ app.use(bodyParser());
 var Emails = mongoose.model('Emails', {
 	name	: String,
 	e_mail	: String,
-	gender	: String,
-	rstatus : String,
+	prof	: String,
+	SO		: String,
 	city	: String,
-	neighborhood : String
-})
+	neighborhood : String,
+	rstatus : String,
+	kids	: String,
+	pref	: String
+});
 
 //routes
 //api
@@ -43,10 +46,13 @@ app.post('/api/emails', function(req,res) {
 	Emails.create({
 		name	: req.body.name,
 		e_mail	: req.body.e_mail,
-		gender 	: req.body.gender,
-		rstatus : req.body.rstatus, 
+		prof 	: req.body.prof,
+		SO		: req.body.SO,
 		city	: req.body.city,
 		neighborhood: req.body.neighborhood,
+		rstatus : req.body.rstatus, 
+		kids	: req.body.kids,
+		pref	: req.body.pref,
 		done	: false
 	}, function(err,todo) {
 		if(err)
@@ -59,6 +65,10 @@ app.post('/api/emails', function(req,res) {
 //application
 app.get('/', function(req,res) {
 	res.sendfile('/public/index.html');
+});
+
+app.get('/join', function(req,res) {
+	res.sendfile(__dirname + '/public/join.html');
 });
 
 app.get('/about', function(req,res) {

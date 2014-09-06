@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html ng-app="Gather">
+<html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -65,13 +65,13 @@
 		<div class="collapse navbar-collapse" id="navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="/about">Our Story</a></li>
-				<li><a href="#" data-toggle="modal" data-target="#myModal">Join</a></li>
+				<li><a href="/join">Join</a></li>
 			</ul>
 		</div>
 	</div>
 </nav>
 <!-- SET THE CONTROLLER AND GET ALL TODOS -->
-<body ng-controller="mainController">
+<body>
 
 	<div class = "container text-center">
 		<div class = "row">
@@ -89,108 +89,17 @@
 				<h3>  </h3>
 			</div>
 		</div>
-
-		<div class="alert alert-success" id="messages" ng-show="message">{{ message }} </div>
-
 	</div>
 
 	<div class="container">
 		<!-- Signup Modal Button -->
 		<div class="row">
 			<div class="col-sm-6 col-sm-offset-3 text-center">
-				<button class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#myModal" other-color>
-					<h1>Get Started</h1>
-				</button>
-			</div>
-		</div>
-
-		<!-- Modal -->
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-						</button>
-							<h2 class="modal-title" id="myModalLabel"><span style =font-family:"Oswald";>Please Enter Your Info</span></h2>
-							<h2><small><span style = font-family:"Oswald";>We will keep you posted on our progress</span></small></h2>
-					</div>
-					<div class="modal-body">
-
-						<!-- FORM TO CREATE TODOS -->
-						<div id="signup-form" class="row">
-							<div class="col-sm-8 col-sm-offset-2 text-left">
-								<!-- Show Error/Succes Messages -->
-								
-								<form>
-
-									<div id ="name-group" class="form-group">
-										<!-- label>Name</label -->
-										<input type="text" class="form-control input-lg text-left" placeholder="Name" ng-model="formData.name">
-									</div>
-
-									<div id = "e_mail-group" class = "form-group">
-										<!--label>E-mail Address</label-->
-										<input type="text" class="form-control input-lg text-left" placeholder="E-mail" ng-model="formData.e_mail">
-									</div>
-
-									<div id ="city-group" class="form-group">
-										<!--label>City</label-->
-										<input type="text" class="form-control input-lg text-left" placeholder="City" ng-model="formData.city">
-									</div>
-
-									<div id="neighborhood-group" class="form-group">
-										<!--label>Neighborhood</label-->
-										<input type="text" class="form-control input-lg text-left" placeholder="Neighborhood" ng-model="formData.neighborhood">
-									</div>
-
-									<!-- Gender Radio Buttons -->
-									<label>Gender</label>
-									<div id = "gender-group" class = "form-group">
-										<div class="radio">
-											<label>
-												<input type="radio" name="gender" value="male" ng-model="formData.gender">
-												Male
-											</label>
-										</div>
-										<div class = "radio">
-											<label>
-												<input type="radio" name="gender" value="female" ng-model="formData.gender">
-												Female
-											</label>
-										</div>
-									</div>
-
-									<!-- Relationship Status Radio Buttons -->
-									<label>Relationship Status</label>
-									<div id = "relationship-group" class = "form-group">
-										<div class = "radio">
-											<label>
-												<input type="radio" name="rstatus" value="Dating" ng-model="formData.rstatus">
-												Dating
-											</label>
-										</div>
-										<div class = "radio">
-											<label>
-												<input type="radio" name="rstatus" value="Engaged" ng-model="formData.rstatus">
-												Engaged
-											</label>
-										</div>
-										<div class = "radio">
-											<label>
-												<input type="radio" name="rstatus" value="Married" ng-model="formData.rstatus">
-												Married
-											</label>
-										</div>
-									</div>
-								</form>
-								</div>
-							</div>
-						</div>
-						<div class="modal-footer">
-							<!-- createToDo() WILL CREATE NEW TODOS -->
-							<button type="submit" class="btn btn-success btn-lg" ng-click="createSubmission()">Submit</button>
-						</div>
-					
+				<a href='/join'>
+					<button class="btn btn-success btn-lg btn-block" other-color>
+						<h1>Get Started</h1>
+					</button>
+				</a>
 			</div>
 		</div>
 	</div>
@@ -213,6 +122,4 @@
 	
 
 </body>
-
-</span>
 </html>
