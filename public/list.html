@@ -37,20 +37,26 @@
 					<tr>
 						<th>Name</th>
 						<th>Email</th>
-						<th>Gender</th>
-						<th>Relationship</th>
+						<th>Profession</th>
+						<th>SO</th>						
 						<th>City</th>
 						<th>Neighborhood</th>
+						<th>Relationship</th>
+						<th>Kids?</th>
+						<th>Prefer?</th>
 					</tr>
 				</thead>
 				<tbody ng-repeat="email in emails">
 					<tr>
 						<td>{{ email.name }}</td>
 						<td>{{ email.e_mail }}</td>
-						<td>{{ email.gender }}</td>
-						<td>{{ email.rstatus }}</td>
+						<td>{{ email.prof }}</td>
+						<td>{{ email.SO }}</td>
 						<td>{{ email.city }}</td>
 						<td>{{ email.neighborhood }}</td>
+						<td>{{ email.rstatus }}</td>
+						<td>{{ email.kids }}</td>
+						<td>{{ email.pref }}</td>
 					</tr>
 				</tbody>
 			</table>
