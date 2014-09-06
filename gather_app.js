@@ -10,7 +10,6 @@ var port = process.env.PORT || 8080;
 
 //configuration
 mongoose.connect(String(process.env.MONGOHQ_URL));
-mongoose.connect(dbDevURL);
 app.use(express.static(__dirname + '/public'));
 app.use(logger('dev'));
 app.use(bodyParser());
