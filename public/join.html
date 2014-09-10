@@ -79,8 +79,8 @@
 		</div>
 	</div>
 
-	<a href='https://www.youtube.com/watch?v=i7KvO6S_3Mg'?>
-	<div class="alert alert-success" id="messages" ng-show="message"> {{ message }} </div>
+	<a href='https://www.youtube.com/watch?v=i7KvO6S_3Mg'>
+	<div class="alert alert-success" id="messages" ng-show="message" > {{ message }} </div>
 	</a>
 
 	<div class='container text-left'>
@@ -96,8 +96,6 @@
 			
 				
 			<form>
-
-				<h4><label>Tell us about you & your boo:</label></h4>
 				<div id ="name-group" class="form-group">
 					<!-- label>Name</label -->
 					<input type="text" class="form-control input-lg text-left" placeholder="Your name" ng-model="formData.name">
@@ -108,24 +106,29 @@
 					<input type="text" class="form-control input-lg text-left" placeholder="Email" ng-model="formData.e_mail">
 				</div>
 
+				<div id ="city-group" class="form-group">
+					<!--label>City</label-->
+					<input type="text" class="form-control input-lg text-left" placeholder="Current city" ng-model="formData.city">
+				</div>
+
+				<div id ="hometown-group" class="form-group">
+					<!--label>City</label-->
+					<input type="text" class="form-control input-lg text-left" placeholder="Hometown" ng-model="formData.hometown">
+				</div>
+
 				<div id = "industry-group" class = "form-group">
 					<!--label>E-mail Address</label-->
-					<input type="text" class="form-control input-lg text-left" placeholder="Industry" ng-model="formData.prof">
+					<input type="text" class="form-control input-lg text-left" placeholder="Industry" ng-model="formData.industry">
 				</div>
 
 				<div id = "SO-group" class = "form-group">
 					<!--label>E-mail Address</label-->
-					<input type="text" class="form-control input-lg text-left" placeholder="Your Partner's Name" ng-model="formData.SO">
+					<input type="text" class="form-control input-lg text-left" placeholder="Partner's name" ng-model="formData.SO">
 				</div>
 
-				<div id ="city-group" class="form-group">
-					<!--label>City</label-->
-					<input type="text" class="form-control input-lg text-left" placeholder="City" ng-model="formData.city">
-				</div>
-
-				<div id="neighborhood-group" class="form-group">
+				<div id="PI-group" class="form-group">
 					<!--label>Neighborhood</label-->
-					<input type="text" class="form-control input-lg text-left" placeholder="Neighborhood" ng-model="formData.neighborhood">
+					<input type="text" class="form-control input-lg text-left" placeholder="Partner's industry" ng-model="formData.PI">
 				</div>
 
 				<!-- Relationship Status Radio Buttons -->
@@ -217,6 +220,73 @@
 						<label>
 							<input type="radio" name="pref" value="neither" ng-model="formData.pref">
 							neither
+						</label>
+					</div>
+				</div>
+
+				<!-- Activity Radio Buttons -->
+				<label>We'd be interested in a Gather for:</label>
+				<div id = "activity-group" class = "form-group">
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" name="aHH" value="Happy Hour" ng-model="formData.aHH">
+							Happy Hour
+						</label>
+					</div>
+
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" name="aDrinks" value="Meeting for drinks" ng-model="formData.aDrinks">
+							Meeting for drinks
+						</label>
+					</div>
+
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" name="aDinner" value="Dinner" ng-model="formData.aDinner">
+							Dinner
+						</label>
+					</div>
+
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" name="aBrunch" value="Brunch" ng-model="formData.aBrunch">
+							Brunch
+						</label>
+					</div>
+
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" name="aPark" value="Beach-Park" ng-model="formData.aPark">
+							Going to the beach or a park
+						</label>
+					</div>
+
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" name="aHike" value="hike" ng-model="formData.aHike">
+							Going on a hike
+						</label>
+					</div>
+
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" name="aMusGal" value="museum" ng-model="formData.aMusGal">
+							Going to a museum / gallery
+						</label>
+					</div>
+
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" name="aConcert" value="concert" ng-model="formData.aConcert">
+							Going to a concert
+						</label>
+					</div>
+
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" name="aCoffee" value="coffee" ng-model="formData.aCoffee">
+							Going to a coffee shop
 						</label>
 					</div>
 				</div>

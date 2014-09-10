@@ -4,10 +4,7 @@ body 				{   padding-top:50px;
 						font-family: 'Oswald';
 						font-weight: bold;
 						background-color: #eeeeee;
-						padding-left: 0 !important;
-						padding-right: 0 !important;
-						margin-left: 0px;
-						margin-right: 0px;
+						
 					}
 
 .navbar-default {
@@ -16,7 +13,7 @@ body 				{   padding-top:50px;
 	font-size: 1.2em;
 }
 
-.container {
+.container-no-margin {
 	margin-left: 0px;
 	margin-right: 0px;
 	padding-left: 0px;
