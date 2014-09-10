@@ -16,7 +16,7 @@ function mainController($scope, $http) {
 		$http.post('/api/emails', $scope.formData)
 			.success(function(data) {
 				$scope.formData = {};
-				$scope.message = 'Thank you so much! We will follow up with you at the email provided. In the meantime, click on this text for a relevant video.';
+				$scope.message = 'Thank you so much! We will follow up with you at the email provided. In the meantime, here is Jerry Seinfeld talking about adult friends';
 				//$('#myModal').modal('toggle');
 			})
 			.error(function(data) {
