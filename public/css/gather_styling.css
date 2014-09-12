@@ -158,5 +158,15 @@ h4 {
 	margin-right: 0px;
 }
 
+.row-bottom {
+	padding-top: 10px;
+	padding-bottom: 30px;
+	padding-left: 0px;
+}
+
+.label-font {
+	font-size: 1.3em;
+}
+
 
 
